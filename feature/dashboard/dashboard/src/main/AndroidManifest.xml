@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.inoxoft.dashboard">
+
+
+    <application tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.modulearchitecture.dashboard.MainActivity" />
+    </application>
+
+</manifest>

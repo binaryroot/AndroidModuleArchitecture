@@ -1,0 +1,18 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+sourceSets {
+    main {
+        java.srcDir 'src/main/'
+    }
+}
+
+dependencies {
+    implementation project(':core:impl')
+
+    api applicationTestDependencies.mockito
+    api applicationTestDependencies.robolectric
+    api applicationTestDependencies.fixture
+    api applicationTestDependencies.junit
+    api applicationTestDependencies.junit_params
+}

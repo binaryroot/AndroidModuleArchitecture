@@ -1,0 +1,11 @@
+rootProject.buildFileName = 'build.gradle'
+
+include ':core:test-helpers', ':core:impl'
+
+//features
+include ':feature:dashboard:dashboard_contract', ':feature:dashboard:dashboard'
+include ':feature:base', ':feature:login_flow:login_contract', ':feature:login_flow:login'
+
+include ':middlewares:database', ':middlewares:analyst'
+
+include ':app'

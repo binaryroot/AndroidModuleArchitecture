@@ -1,0 +1,29 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+sourceSets {
+    main {
+        java.srcDir 'src/main/'
+    }
+}
+
+dependencies {
+    api libraries.supportAnnotations
+    api libraries.retrofitGsonConverter
+    api libraries.rxJava
+
+    api libraries.dagger
+
+    api(libraries.retrofit) {
+        // exclude Retrofit’s OkHttp 3 dependency so we can explicitly define which version to use
+        exclude module: 'okhttp'
+    }
+
+    api libraries.okHttp
+    api libraries.okHttpLoggingInterceptor
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+}
+
+
+

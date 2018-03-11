@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+apply from: rootProject.file('config/gradle/android-setup.gradle')
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+}
+
+android {
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+
+dependencies {
+    implementation project(':feature:base')
+
+    implementation project(':feature:dashboard:dashboard_contract')
+    implementation project(':feature:dashboard:dashboard')
+
+    implementation project(':feature:login_flow:login')
+    implementation project(':feature:login_flow:login_contract')
+
+    implementation project(':middlewares:database')
+
+    kapt libraries.daggerAndroidProcessor
+    kapt libraries.daggerCompiler
+}

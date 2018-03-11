@@ -1,0 +1,24 @@
+apply plugin: 'com.android.feature'
+apply from: rootProject.file('config/gradle/android-setup.gradle')
+
+android {
+    baseFeature true
+}
+
+dependencies {
+    //Library dependency
+    api project(':core:impl')
+    api libraries.supportAppCompat
+    api libraries.supportAppCompat
+    api libraries.supportDesign
+
+    api libraries.daggerCompilerSupport
+
+    api "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Test dependency
+    testImplementation project(':core:test-helpers')
+}

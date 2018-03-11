@@ -1,0 +1,37 @@
+apply from: rootProject.file('config/gradle/dependencies.gradle')
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+
+    compileSdkVersion project.properties.compile_sdk_version as int
+    buildToolsVersion project.properties.build_tools_version
+
+    defaultConfig {
+        minSdkVersion project.properties.min_sdk_version
+        targetSdkVersion project.properties.compile_sdk_version
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            postprocessing {
+                removeUnusedCode false
+                removeUnusedResources false
+                obfuscate false
+                optimizeCode false
+                proguardFile 'proguard-rules.pro'
+            }
+        }
+    }
+
+    defaultConfig {
+        multiDexEnabled true
+    }
+
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+}
