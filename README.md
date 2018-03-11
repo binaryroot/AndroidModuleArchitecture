@@ -89,7 +89,7 @@ implementation project(':feature:login_flow:login_contract')
 As module knows about the intent factory and dagger module was put into the graph. The field can be injected.
 
 #### Middleware level
-At this level, the application contains modules which will be reusable across the application. For example, good candidates will be database module, analysts or even IOT module.
+At this level, the application contains modules which will be reusable across the application. For example, good candidates will be database module, analytics or even IOT module.
 Communication with Middleware modules follows [The Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle).
 
 ![Alt text](https://preview.ibb.co/g9wrTS/Untitled_Diagram_10.png)
