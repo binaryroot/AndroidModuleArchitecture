@@ -6,9 +6,9 @@ Below represents modules dependencies. In general, they are split into three lev
  - Features level
  - Middleware level
  
- Each level will be described precisely lower.
+Each level will be described below in more precise way.
 
-![Alt text](https://preview.ibb.co/h8PfNn/Untitled_Diagram_8.png)
+![Alt text](http://preview.ibb.co/diGgdS/Untitled_Diagram_12.png)
 
  ### Key concepts
 Create stand-alone modules based on [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles.
@@ -99,4 +99,4 @@ Communication with Middleware modules follows [The Dependency Inversion Principl
   
   
 #### Testability
-With this approach, features can be tested, independent. For this needed add launch activity into feature manifest.
+With this approach, features can be tested independently. For this it is needed to add launch activity into feature manifest.
