@@ -13,7 +13,7 @@ Each level will be described below in more precise way.
  ### Key concepts
 Create stand-alone modules based on [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles.
  
-Increase compilation time.
+Decrease compilation time.
  
 To create reusable components or templates for them. 
 
